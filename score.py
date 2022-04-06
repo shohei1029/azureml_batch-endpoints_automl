@@ -7,7 +7,7 @@ def init():
 
     model = joblib.load(model_path)
 
-def run(mini_batch):
+def run(mini_batch): # Pandas df if input is FIleDataset
     print(f"run method start: {__file__}, run({mini_batch})")
     result = model.predict(mini_batch)
     return result.tolist()
