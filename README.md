@@ -1,5 +1,6 @@
 # azureml_batch-endpoints_automl
 Try managed batch endpoints of Azure Machine Learning
+やりたいこと：AutoMLで学習したモデルをマネージドバッチエンドポイントにデプロイし推論環境を構成する
 
 # Contents
 ・Python SDK による AutoML実行
