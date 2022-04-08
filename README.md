@@ -7,7 +7,14 @@ Try managed batch endpoints of Azure Machine Learning
 - テーブルデータ (Titanic)
 - 分類タスク
 ・GUIベースでのバッチエンドポイント実行
-- 推論スクリプト: score.py (構築中、まだ動かない)
+- 推論スクリプト: score.py
+
+# Steps
+1. Run `train-automl.ipynb`
+2. Get the training environment by JasmineClient
+3. Register score dataset as a FileDataset in AML
+4. Register Trained Model (model.pkl)
+5. Create Endpoint and Deploy with `score.py` and registerd resources above.
 
 # Refs
 - Docs: https://docs.microsoft.com/ja-jp/azure/machine-learning/how-to-use-batch-endpoints-studio

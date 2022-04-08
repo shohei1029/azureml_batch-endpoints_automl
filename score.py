@@ -1,5 +1,8 @@
 import os
+import numpy as np
+import pandas as pd
 import joblib
+
 
 def init():
     global model
@@ -32,16 +35,15 @@ def run(mini_batch):
 
     for file in mini_batch:
         df = pd.read_csv(file)
-        print("*"*100)
+        print("*" * 100)
         print(df)
         try:
             result = model.predict(df)
             print(f'result: {result}')
             resultList.append(
-                f'Files: {os.path.basename(file)}--Results:{result.tolist()}'
-        )
+                f'Files: {os.path.basename(file)}--Results:{result.tolist()}')
         except Exception as e:
             print(f'error: {e}')
-            print("*"*100)
+            print("*" * 100)
 
     return resultList
